@@ -2,8 +2,8 @@ const express=require('express');
 const app= new express;
 
 app.set('view engine','ejs');
-
+app.set('views','./src/views')
 app.get('/',function(req,res){
-    res.sendFile(__dirname+"/src/views/index.html");
+    res.render("index");
 });
-app.listen(3333);
+app.listen(5000);
